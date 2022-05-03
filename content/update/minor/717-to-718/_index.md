@@ -19,6 +19,7 @@ This document guides you through the update from Camunda Platform `7.17.x` to `7
 1. For administrators and developers: [Full distribution update](#full-distribution)
 1. For administrators: [Standalone web application](#standalone-web-application)
 1. For administrators and developers: [Groovy version update](#groovy-version-update)
+1. For administrators and developers: [Content Security Policy update](#content-security-policy-update)
 
 This guide covers mandatory migration steps and optional considerations for the initial configuration of new functionality included in Camunda Platform 7.18.
 
@@ -90,3 +91,10 @@ Camunda users relying on Groovy for their scripts need to replace the libraries 
 [Camunda libraries and applications](#camunda-libraries-and-applications) guide for their application server. Camunda Platform Run users need to replace the `groovy-all-$GROOVY_VERSION.jar` in the `{RUN_HOME}/configuration/userlib/` directory with the `.jar` libraries from the list above.
 
 Camunda users who don't rely on Groovy can ignore this section.
+
+# Content Security Policy update
+
+The default **Content Security Policy** configuration is changing from version 7.18.
+In older versions the default policy used to be a very minimal configuration, allowing almost everything.\
+Starting of this version we are introducing a stricter **Content Security Policy** by default, that allows just the required contents.
+You can find the details in the [Content Security Policy]({{< ref "/webapps/shared-options/header-security.md#content-security-policy" >}}) section.
