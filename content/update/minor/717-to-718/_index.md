@@ -95,6 +95,6 @@ Camunda users who don't rely on Groovy can ignore this section.
 # Content Security Policy update
 
 The default **Content Security Policy** configuration is changing from version 7.18.
-In older versions the default policy used to be a very minimal configuration, allowing almost everything.\
+In older versions, the default policy used to be a very minimal configuration, which had to be explicitly strengthened according to our recommendations.\
 Starting of this version we are introducing a stricter **Content Security Policy** by default, that allows just the required contents.
 You can find the details in the [Content Security Policy]({{< ref "/webapps/shared-options/header-security.md#content-security-policy" >}}) section.
